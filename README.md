@@ -105,11 +105,6 @@ infrastructure-reseau-multi-sites/
 │   ├── 09-mappage-des-lecteurs.md
 │   ├── 10-tests-et-validation.md
 │   └── 11-evolutions-et-lecons.md
-├── configs/
-│   ├── dhcpd.conf
-│   └── isc-dhcp-server
-├── schemas/
-│   └── architecture-reseau.md
 └── captures/
     ├── README.md
     ├── 01-reseau/
