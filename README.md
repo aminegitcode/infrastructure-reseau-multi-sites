@@ -21,9 +21,8 @@ Le projet couvre aussi l'administration des comptes, groupes et unités d'organi
 - Attribuer automatiquement des lecteurs réseau selon l'appartenance aux groupes AD.
 
 ## Architecture logique
-![Architecture réseau multi-sites](01-reseau/architecture-reseau.png)
+![Architecture réseau multi-sites](captures/01-reseau/architecture-reseau.png)
 
-> Schéma logique simplifié. Les deux pfSense se joignent par leur interface WAN sur un réseau de transit privé (`192.168.40.0/24`, NAT VMware) : voir [`schemas/`](schemas/architecture-reseau.md).
 
 ## Plan d'adressage
 
