@@ -116,27 +116,3 @@ infrastructure-reseau-multi-sites/
     └── 07-profils-partages/
 ```
 
-## Résultats obtenus
-
-- Tunnel VPN IPsec entre Amiens et Paris (IKEv2, AES 128, SHA256, DH 14) configuré, établi, avec du trafic observé dans les deux sens.
-- Le client de Paris communique avec le serveur AD/DNS d'Amiens et a rejoint le domaine `lab.local`.
-- DHCP opérationnel sur les deux sites : `isc-dhcp-server` à Amiens, pfSense à Paris.
-- GPO de sécurité et de configuration appliquées (voir document 06) ; politique de mots de passe et de verrouillage vérifiée avec `net accounts /domain` après correction de la priorité des GPO.
-- Partages accessibles depuis Paris à travers le VPN : un utilisateur voit les dossiers, mais n'ouvre que celui de son groupe.
-- Lecteurs réseau attribués automatiquement selon l'appartenance aux groupes de sécurité.
-
-## Limites et périmètre
-
-Le laboratoire ne comporte pas de second contrôleur de domaine : `srv-ad` est un point unique de dépendance pour Active Directory et DNS. La haute disponibilité, la sauvegarde/restauration documentée et la supervision centralisée ne sont pas présentées comme réalisées.
-
-Les règles de pare-feu entre les deux LAN sont volontairement larges (tous protocoles) dans ce laboratoire, et le partage des profils est ouvert à Tout le monde au niveau du partage ; ces points sont listés comme pistes d'amélioration dans le document 11.
-
-Un détail n'est pas documenté : les paramètres détaillés de la GPO `GPO-ProfilsItinerants`.
-
-## Sécurité
-
-Ce dépôt ne contient ni clé prépartagée IPsec, ni mot de passe, ni sauvegarde de configuration pfSense ou Windows. Les captures sont publiées telles quelles : elles peuvent montrer des noms de comptes et de machines du laboratoire, ainsi que des adresses privées. Les adresses du laboratoire sont toutes privées.
-
-## Auteur et contexte
-
-Projet personnel d'Amine Djabri, réalisé dans le cadre de la Licence Pro MRIT — Cybersécurité des Systèmes Industriels (IFALP), pour mettre en pratique l'administration systèmes et réseaux dans un environnement virtualisé. Les noms de sites, de domaine et les plages d'adresses sont ceux du laboratoire.
