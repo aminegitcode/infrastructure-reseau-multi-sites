@@ -55,7 +55,7 @@ Le projet couvre aussi l'administration des comptes, groupes et unités d'organi
 
 - **Le DNS du domaine est géré par Active Directory**
 - **Un DHCP par site**, distribuant tous deux le DNS d'Active Directory.
-- **Droits attribués à des groupes** (`GG_IT`, `GG_RH`, `GG_Direction`) plutôt qu'à des utilisateurs, combinés entre permissions de partage et NTFS.
+
 
 ## Compétences mises en œuvre
 
